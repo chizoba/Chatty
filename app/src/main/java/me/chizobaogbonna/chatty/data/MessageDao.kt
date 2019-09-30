@@ -40,7 +40,7 @@ interface MessageDao {
     @Query("SELECT * FROM messages WHERE id = :messageId")
     suspend fun getMessage(messageId: Int): Message
 
-    @Update//(onConflict = OnConflictStrategy.REPLACE)
+    @Update
     suspend fun updateMessage(message: Message)
 
 }
