@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clipToPadding="false"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/senderLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@+id/avatar"
+        android:paddingBottom="4dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="Rose" />
+
+    <TextView
+        android:id="@+id/messageBodyView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/senderLabel"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="16dp"
+        android:layout_toEndOf="@+id/avatar"
+        android:background="@drawable/others_message_background"
+        android:paddingLeft="12dp"
+        android:paddingTop="12dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="12dp"
+        android:textSize="18sp"
+        tools:text="How are you doing?" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/attachmentRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/messageBodyView"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        tools:listitem="@layout/attachment_layout" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avatar"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignTop="@+id/messageBodyView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:scaleType="centerCrop"
+        tools:background="@color/colorGrey" />
+</RelativeLayout>
